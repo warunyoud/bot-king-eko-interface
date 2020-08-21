@@ -11,8 +11,8 @@ module.exports = {
 };
 
 module.exports = (bot, opts) => {
-  const httpServer = new HttpServer(bot, opts);
-  const client = new EkoClient(opts);
+  const httpServer = new HttpServer(bot, opts.httpServer);
+  const client = new EkoClient(opts.eko);
 
   return {
     httpServer,
